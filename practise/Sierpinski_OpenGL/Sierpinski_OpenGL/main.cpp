@@ -37,6 +37,7 @@ static unsigned int CompileShader(unsigned int type, const char* source)
 	return id;
 }
 
+
 static unsigned int CreateShader(const char* vertexShader, const char* fragmentShader)
 {
 	unsigned int program = glCreateProgram();
@@ -53,6 +54,7 @@ static unsigned int CreateShader(const char* vertexShader, const char* fragmentS
 
 	return program;
 }
+
 
 struct ShaderStrings
 {
