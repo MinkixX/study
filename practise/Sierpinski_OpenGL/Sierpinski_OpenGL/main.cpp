@@ -62,7 +62,6 @@ struct ShaderStrings
 	char fragment[1024];
 } typedef ShaderStrings;
 
-
 static ShaderStrings ParseShader(const char* path)
 {
 	enum ShaderType {
@@ -98,9 +97,9 @@ static ShaderStrings ParseShader(const char* path)
 		else
 		{
 			if (type == VERTEX)
-				strcat_s(shaderStrings.vertex, sizeof(buff), buff);
+				strcat_s(shaderStrings.vertex, sizeof(buff) / sizeof(char), buff);
 			else if (type == FRAGMENT)
-				strcat_s(shaderStrings.fragment, sizeof(buff), buff);
+				strcat_s(shaderStrings.fragment, sizeof(buff) / sizeof(char), buff);
 		}
 	}
 
